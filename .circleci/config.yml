@@ -21,7 +21,6 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - checkin
       - run:
           name: "Say time"
           command: "echo $(date)"
@@ -33,3 +32,4 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+      - say-time
